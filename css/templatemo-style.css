@@ -223,7 +223,8 @@ ul {
   overflow: hidden;
 }
 .panel__wrapper {
-  padding: 0;
+  padding-top: 0;
+	  padding-bottom: 100vh;
   -webkit-perspective: 1000px;
           perspective: 1000px;
 }
@@ -259,6 +260,7 @@ ul {
   width: 100%;
   overflow: hidden;
   background-attachment: fixed;
+	  padding-bottom: 100vh;
 }
 
 .b-red {
@@ -269,6 +271,7 @@ ul {
   overflow: hidden;
   background-attachment: fixed;
   margin-top: -2px;
+	  padding-bottom: 100vh;
 }
 
 .b-green {
@@ -279,6 +282,7 @@ ul {
   width: 100%;
   overflow: hidden;
   background-attachment: fixed;
+	  padding-bottom: 100vh;
 }
 
 .b-yellow {
@@ -289,6 +293,7 @@ ul {
   width: 100%;
   overflow: hidden;
   background-attachment: fixed;
+	  padding-bottom: 100vh;
 }
 
 
@@ -723,25 +728,25 @@ ul {
     margin-left: 15px;
     margin-right: 15px;
   }
-  .projects-content {
+  .privacy-policy-content {
     width: 100vh;
     height: 100vh;
     padding: 0px 30px;
   }
-  .project-item  {
+  .privacy-policy-item  {
     padding: 0px 120px;
   }
-  .project-item img {
+  .privacy-policy-item img {
     max-width: 100%;
   }
-  .projects-content .heading {
+  .privacy-policy-content .heading {
     padding-top: 25%;
   }
-  .projects-content .owl-carousel {
+  .privacy-policy-content .owl-carousel {
     margin: 0;
     width: 100%;
   }
-  .projects-content .text-content {
+  .privacy-policy-content .text-content {
     display: none;
   }
   .contact-content .more-info {
@@ -1196,3 +1201,5 @@ body.lb-disable-scrolling {
 .owl-carousel .owl-nav {
   display: none;
 }
+
+
