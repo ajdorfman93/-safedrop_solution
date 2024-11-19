@@ -6179,6 +6179,9 @@ button.close {
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
+	  .about-box-content img {
+    display: none;
+	}
   .visible-sm {
     display: block !important;
   }

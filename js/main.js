@@ -3286,25 +3286,22 @@ var openMenu = function() {
   menu.classList.toggle('nav__list--active');
 };
 
-// reveal content of first panel by default
+// Reveal the content of the first panel by default
 panel.eq(0).find('.panel__content').addClass('panel__content--active');
 
 var scrollFx = function() {
   var ds = doc.scrollTop();
   var of = vh / 4;
-  
-  // if the panel is in the viewport, reveal the content, if not, hide it.
+
+  // Loop through each panel
   for (var i = 0; i < panel.length; i++) {
-    if (panel.eq(i).offset().top < ds+of) {
-     panel
-       .eq(i)
-       .find('.panel__content')
-       .addClass('panel__content--active');
-    } else {
-      panel
-        .eq(i)
-        .find('.panel__content')
-        .removeClass('panel__content--active')
+    var panelContent = panel.eq(i).find('.panel__content');
+
+    // Check if the panel is already active
+    if (!panelContent.hasClass('panel__content--active')) {
+      if (panel.eq(i).offset().top < ds + of) {
+        panelContent.addClass('panel__content--active');
+      } 
     }
   }
 };
@@ -3319,17 +3316,16 @@ var scrolly = function(e) {
   }, 300, 'swing', function () {
       window.location.hash = target;
   });
-}
+};
 
 var init = function() {
   burger.addEventListener('click', openMenu, false);
   window.addEventListener('scroll', scrollFx, false);
   window.addEventListener('load', scrollFx, false);
-  $('a[href^="#"]').on('click',scrolly);
+  $('a[href^="#"]').on('click', scrolly);
 };
 
 doc.on('ready', init);
-
 
 
 /*!

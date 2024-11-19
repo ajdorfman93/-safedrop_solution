@@ -51,7 +51,7 @@ ul {
 }
 
 .heading h4 {
-  margin-bottom: 60px;
+  margin-bottom: 20px;
   margin-top: 0px;
   font-size: 36px;
   text-transform: uppercase;
@@ -224,25 +224,27 @@ ul {
 }
 .panel__wrapper {
   padding-top: 0;
-	  padding-bottom: 100vh;
+	  padding-bottom: 10vh;
   -webkit-perspective: 1000px;
           perspective: 1000px;
 }
 .panel__content {
   will-change: transform;
-  -webkit-transform: scale(0.7) rotateX(-230deg);
-          transform: scale(0.7) rotateX(-230deg);
-  -webkit-transform-origin: center 80%;
-          transform-origin: center 80%;
+  -webkit-transform: scale(0.9) rotateX(-30deg);
+          transform: scale(0.9) rotateX(-30deg);
+  -webkit-transform-origin: center 50%;
+          transform-origin: center 50%;
   opacity: 0;
-  -webkit-transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -webkit-transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+          transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
+
 .panel__content--active {
   -webkit-transform: none;
           transform: none;
   opacity: 1;
 }
+
 .panel p:last-child {
   margin-bottom: 0;
 }
@@ -258,9 +260,9 @@ ul {
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  overflow: hidden;
+  overflow: inherit;
   background-attachment: fixed;
-	  padding-bottom: 100vh;
+  padding-bottom: 0vh;
 }
 
 .b-red {
@@ -271,7 +273,7 @@ ul {
   overflow: hidden;
   background-attachment: fixed;
   margin-top: -2px;
-	  padding-bottom: 100vh;
+  padding-bottom: 10vh;
 }
 
 .b-green {
@@ -282,7 +284,7 @@ ul {
   width: 100%;
   overflow: hidden;
   background-attachment: fixed;
-	  padding-bottom: 100vh;
+  padding-bottom: 10vh;
 }
 
 .b-yellow {
@@ -293,7 +295,7 @@ ul {
   width: 100%;
   overflow: hidden;
   background-attachment: fixed;
-	  padding-bottom: 100vh;
+  padding-bottom: 10vh;
 }
 
 
@@ -544,6 +546,80 @@ ul {
   -webkit-transition: all 0.2s linear;
 }
 
+/*
+===================================
+------ TERMS AND CONDITIONS STYLE -----
+===================================
+*/
+
+.terms-content {
+  height: 100vh;
+      background-image: repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 5px,
+       #c8e8f3 5px,
+        #c8e8f3 10px
+    );
+  padding: 0px 0px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.terms-content .heading {
+  padding-top: 10%;
+}
+
+.terms-box-content {
+  margin-left: -100px;
+  margin-right: 100px;
+}
+
+.terms-box-content img {
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+}
+
+.terms-content .terms-box-text {
+  background-color: #fff;
+  padding: 30px;
+  margin-top: 0px;
+}
+
+.terms-indent-text p {
+	padding-left: 30px
+}
+
+.terms-content .terms-box-text h4 {
+  display: inline-block;
+  padding-bottom: 5px;
+  font-size: 22px;
+  color: #121212;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 0px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #eee;
+}
+
+.terms-content .terms-box-text p {
+  color: #343434;
+  margin-bottom: 20px;
+}
+
+.terms-content .primary-button a:hover {
+  background-color: transparent;
+  color: #7f00e0;
+  border: 1px solid #7f00e0;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+}
+
+
+
 
 
 /*
@@ -553,7 +629,7 @@ ul {
 */
 
 .contact-content {
-  height: 100vh;
+  height: 40vw;
   background-image: repeating-linear-gradient(
         -45deg,
         transparent,
@@ -567,7 +643,7 @@ ul {
 }
 
 .contact-content .heading {
-  padding-top: 35%;
+  padding-top: 10%;
 }
 
 .contact-content .contat-form {
@@ -649,7 +725,7 @@ ul {
 
 .footer p {
   padding: 20px 0px;
-  color: #fff;
+  color: #7f00e0;
   font-weight: 300;
 }
 
@@ -674,6 +750,9 @@ ul {
     font-size: 22px;
     margin-bottom: 30px;
   }
+	  .about-box-content img {
+		  display: none;
+	}
   .home-content {
     text-align: center;
     margin: 0 auto;
@@ -702,74 +781,97 @@ ul {
     float: none;
     margin-top: 30px;
   }
-  .about-content {
-    height: 100vh;
-    text-align: center;
-    padding: 0px 30px;
-    width: 100vw;
-  }
-  .about-content .heading {
-    padding-top: 10%;
-  }
-  .about-box-content {
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-  .about-box-text {
-    margin-bottom: 30px;
-  }
-  .about-box-content img {
-    position: relative;
-  }
-  .about-content .about-box-text {
-    background-color: #fff;
-    padding: 30px;
-    margin-top: -30px;
-    margin-left: 15px;
-    margin-right: 15px;
-  }
-  .privacy-policy-content {
-    width: 100vh;
-    height: 100vh;
-    padding: 0px 30px;
-  }
-  .privacy-policy-item  {
-    padding: 0px 120px;
-  }
-  .privacy-policy-item img {
-    max-width: 100%;
-  }
-  .privacy-policy-content .heading {
-    padding-top: 25%;
-  }
-  .privacy-policy-content .owl-carousel {
-    margin: 0;
-    width: 100%;
-  }
-  .privacy-policy-content .text-content {
-    display: none;
-  }
+.about-content {
+  width: 100vw; /* Ensure the section spans the full screen width */
+  height: auto; /* Allow height to expand based on the content */
+  padding: 10px 30px; /* Add spacing around the content */
+  box-sizing: border-box; /* Include padding in width and height calculations */
+  overflow: visible; /* Prevent clipping of overflowing content */
+  text-align: center; /* Center-align text */
+}
+
+.about-box-content {
+  margin: 0 auto; /* Center the content horizontally */
+  padding: 10px; /* Add inner spacing */
+  width: 100%; /* Ensure it scales to fit the container */
+}
+
+.about-box-text {
+  margin-bottom: 20px; /* Add space below each text block */
+  word-wrap: break-word; /* Prevent long words from overflowing */
+  text-align: left; /* Adjust text alignment if needed */
+}
+
+.about-box-content img {
+  max-width: 100%; /* Scale images to fit the container */
+  height: auto; /* Maintain image aspect ratio */
+}
+
+
+.privacy-policy-content {
+  width: 100vw; /* Ensure the section spans the full width of the screen */
+  height: auto; /* Allow the height to adjust based on the content */
+  padding: 10px 30px; /* Add some spacing around the content */
+  box-sizing: border-box; /* Include padding in the width and height calculations */
+  overflow: visible; /* Allow the content to expand the section */
+}
+
+.privacy-policy-item {
+  padding: 10px 15px; /* Reduce padding for better fit on smaller screens */
+  word-wrap: break-word; /* Prevent text overflow from long words */
+}
+
+.privacy-policy-content img {
+  max-width: 100%; /* Ensure images scale to fit within their container */
+  height: auto; /* Maintain the image aspect ratio */
+}
+
+.privacy-policy-content .text-content {
+  display: block; /* Ensure text content is visible */
+  margin-bottom: 20px; /* Add spacing between text and other elements */
+}
+
+.terms-content {
+  width: 100vw; /* Ensure the section spans the full width of the screen */
+  height: auto; /* Allow the height to adjust based on the content */
+  padding: 10px 30px; /* Add some spacing around the content */
+  box-sizing: border-box; /* Include padding in the width and height calculations */
+  overflow: visible; /* Allow the content to expand the section */
+}
+
+.terms-item {
+  padding: 10px 15px; /* Reduce padding for better fit on smaller screens */
+  word-wrap: break-word; /* Prevent text overflow from long words */
+}
+
+.terms-content img {
+  max-width: 100%; /* Ensure images scale to fit within their container */
+  height: auto; /* Maintain the image aspect ratio */
+}
+
+.terms-content .text-content {
+  display: block; /* Ensure text content is visible */
+  margin-bottom: 20px; /* Add spacing between text and other elements */
+}
+
   .contact-content .more-info {
-    padding: 30px;
+    padding: 10px 10px;
     margin-top: 0px;
     margin-left: 0px;
     margin-right: 0px;
     position: relative;
-    margin-bottom: 60px;
+    margin-bottom: 10px;
   }
   .contact-content .contat-form {
     background-color: rgba(250, 250, 250, 0.03);
-    padding: 20px;
+    padding: 10px;
     margin-right: 0px;
   }
   .contact-content {
     height: auto;
     width: 100vw;
     padding: 0px 30px;
-  }
-  .contact-content .heading {
-    padding-top: 15%;
-  }
+
 }
 
 
