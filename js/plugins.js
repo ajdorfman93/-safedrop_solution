@@ -46,3 +46,16 @@ $(document).ready(function(){
     })
 
 });
+
+$(document).ready(function(){
+  $('.line-by-line').each(function(){
+    var element = $(this);
+    var lines = element.html().split(/<br\s*\/?/);
+    element.html('');
+    $.each(lines, function(i, line){
+      var div = $('<div class="line-seg" style="display:none;">'+line+'</div>');
+      element.append(div);
+      div.delay(500*i).fadeIn(500);
+    });
+  });
+});
